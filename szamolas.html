@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Számolás</title>
+</head>
+    <body><style>
+        h1, p{
+          text-align: center;
+          font-size: 5w;
+      }
+      img{
+          width: 100%;
+      }
+    ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(34, 34, 34);
+    
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color:blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color:aquamarine;
+        }
+        .active {
+            background-color:no;
+        }
+        </style>
+</head>
+<body bgcolor="#CEFFCF">
+<ul>
+<div class="sidebar">
+  <li><a href="index.html">Rólam</a></li>
+  <li><a href="keplink.html">Képlink</a></li>    
+  <li><a href="lista.html">Lista</a></li>
+  <li><a href="orarend.html">Orarend</a></li>
+  <li><a href="pizza.html">Pizza</a></li>
+  <li><a href="homoktovis.html">Homoktövis</a><li>
+  <li>
+    <a class="active"
+     href="evszak.html">Évszakok</a>
+  </li>
+</ul>
+</div>
+
+    <h1>Számolás</1>
+    <form action="javascript:oa()">
+        <input type="number" name="a" id="a" placeholder="szam1">
+        <input type="number" name="b" id="b" placeholder="szam2">
+        <input type="number" name="c" id="c" placeholder="eredmeny"><br>
+        <input type="color" name="szin" id="szin" value="#ff0000">
+        <input type="submit" value="SUMBIT">
+        <input type="submit" value="RESET">
+        <input type="checkbox" name="+" id="+">
+        <input type="checkbox" name="-" id="-">
+    </form>
+
+    <script>
+        function oa() {
+            c.value = Number(a.value) + Number(b.value) ;
+            document.body.style.backgroundColor=szin.value
+        }
+        {
+            c.value = Number(a.value) - Number(b.value) ;
+            document.body.style.backgroundColor=szin.value
+        }
+        
+    </script>
+</body>
+</html>
