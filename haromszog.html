@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haromszog</title>
+    <style>
+        #haromszog{
+            border-left: 100px solid purple;
+            border-top: 200px solid white;
+        }
+
+        h1, p{
+            text-align: center;
+            font-size: 5w;
+        }
+        img{
+            width: 100%;
+        }
+      ul{
+              list-style-type: none;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+              background-color: rgb(34, 34, 34);
+      
+          }
+          li {
+              float: left;
+          }
+          li a {
+              display: block;
+              color:blue;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+          }
+          li a:hover:not(.active) {
+              background-color:aquamarine;
+          }
+          .active {
+              background-color:no;
+          }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <div class="sidebar">
+          <li><a href="index.html">Rólam</a></li>
+          <li><a href="keplink.html">Képlink</a></li>    
+          <li><a href="lista.html">Lista</a></li>
+          <li><a href="orarend.html">Orarend</a></li>
+          <li><a href="pizza.html">Pizza</a></li>
+          <li><a href="homoktovis.html">Homoktövis</a><li>
+            <li><a href="haromszog.html">Haromszog</a></li>
+          <li>
+            <li> <a href="szamolas.html">Számolás</a> </li>
+            <a class="active"
+             href="evszak.html">Évszakok</a> </li>
+          </div>
+          </ul>
+    
+    <h1>Pitagorasz tétel háromszög rajzolás</h1>
+
+    <form action="javascript:vold(0)">
+        <fieldset>
+
+    a: <input type="number" name="aaa" id="a" oninput="rajzol()">
+    b: <input type="number" name="aaa" id="b" oninput="rajzol()">
+    c: <input type="number" name="aaa" id="c" oninput="rajzol()">
+
+            <div id="haromszog"></div>
+        </fieldset>
+    </form>
+
+    <script>
+        function rajzol(){
+            const hsz = document.getElementById('haromszog');
+
+            hsz.style = "border-left:" + a.value + "px solid purple;"
+                    + "border-top:" + b.value + "px solid white;"
+        }
+
+            if (a.value != 0 && b.value != 0) {
+                c.value = Math.sqrt((a.value * a.value) + (b.value * b.value))
+            }
+
+            if (a.value != 0 && b.value != 0) {
+                c.value = Math.sqrt((c.value * c.value) - (b.value * b.value))
+            }
+            if (a.value != 0 && b.value != 0) {
+                c.value = Math.sqrt((a.value * a.value) - (a.value * a.value))
+            }
+
+            const hsz = document.getElementById('haromszog');
+        hsz.style = "border-left" + a.value + "px solid green;"
+        + "boreder-top;" + b.value + "px solid transparent;"
+        
+
+    </script>
+
+</body>
+</html>
